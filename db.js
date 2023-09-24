@@ -1,12 +1,10 @@
-const express = require("express");
+require('dotenv').config()
 const mongoose = require("mongoose");
-const app = express();
-// const PORT = process.env.PORT || 9000;
-const dbURL = "mongodb+srv://swdnikhil:Nikhil%402000@neog-self.4hpwf56.mongodb.net/zomato-restaurant?retryWrites=true&w=majority";
+const dbURI = process.env.DB_URL;
 
 //Connect to MongoDB
 mongoose
-  .connect(dbURL, {
+  .connect(dbURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })

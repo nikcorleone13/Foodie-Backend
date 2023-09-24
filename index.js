@@ -5,8 +5,6 @@ const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// repl link
-// https://replit.com/@nikcorleone13/Restaurant-Backend?v=1
 app.use(bodyParser.json());
 app.listen(PORT, () => {
   console.log(`Server is running for Zomato-Backend on port ${PORT}`);
